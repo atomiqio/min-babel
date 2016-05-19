@@ -1,0 +1,33 @@
+{
+  "name": "min-babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist --source-maps",
+    "start": "node dist/app.js",
+    "test": "mocha dist/test",
+    "test2": "mocha --compilers js:babel-register src/test",
+    "cover": "npm run build && node node_modules/.bin/isparta cover --root dist/test --report html node_modules/.bin/_mocha -- --recursive dist/test/**/*.js",
+    "lint": "eslint src",
+    "format": "esformatter -i 'src/**/*.js'"
+  },
+  "author": "Tony Pujals (http://twitter.com/subfuzion)",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.7.7",
+    "babel-register": "^6.9.0",
+    "esformatter": "^0.9.3",
+    "eslint": "^2.10.2",
+    "eslint-plugin-babel": "^3.2.0",
+    "isparta": "^4.0.0",
+    "mocha": "^2.4.5",
+    "source-map-support": "^0.4.0"
+  },
+  "dependencies": {
+    "node-fetch": "^1.5.2"
+  }
+}

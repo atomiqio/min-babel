@@ -1,0 +1,2 @@
+FROM appcelerator/node:amp
+
