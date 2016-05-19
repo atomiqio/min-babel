@@ -1,4 +1,4 @@
-require('source-map-support').install()
+//require('source-map-support').install()
 
 const log = console.log // eslint-disable-line no-console
 
