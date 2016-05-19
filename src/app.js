@@ -5,8 +5,7 @@ const log = console.log // eslint-disable-line no-console
 function echo(str) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      //resolve(str)
-      reject(new Error('boom'))
+      resolve(str)
     }, 2000)
   })
 }

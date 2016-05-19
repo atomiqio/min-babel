@@ -1,5 +1,3 @@
-require('source-map-support').install()
-
 import assert from 'assert'
 import GitHubUser from '../lib/GitHubUser'
 
