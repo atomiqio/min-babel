@@ -6,9 +6,9 @@
   "scripts": {
     "build": "babel src -d dist --source-maps",
     "start": "node dist/app.js",
-    "test": "mocha dist/test",
-    "test2": "mocha --compilers js:babel-register src/test",
-    "cover": "npm run build && node node_modules/.bin/isparta cover --root dist/test --report html node_modules/.bin/_mocha -- --recursive dist/test/**/*.js",
+    "test": "mocha --compilers js:babel-register src/test",
+    "cover": "run build && node node_modules/.bin/isparta cover --root dist/test --report html node_modules/.bin/_mocha -- --recursive dist/test/**/*.js",
+    "cover2": "babel-node node_modules/.bin/isparta cover --root src/test --report html node_modules/.bin/_mocha -- --recursive src/test/**/*.js",
     "lint": "eslint src",
     "format": "esformatter -i 'src/**/*.js'"
   },
