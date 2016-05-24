@@ -1,2 +1,2 @@
-FROM appcelerator/node:amp
+FROM appcelerator/amp:latest
 
